@@ -4,7 +4,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
 ### POPULAR MAVEN PLUGINS
 
 # Maven Generate XSD SCHEMA
-# Dependencies
+## Dependencies
 ```xml
 <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -22,7 +22,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
             <version>${jaxb.version}</version>
         </dependency>
 ````
-#  Plugin
+##  Plugin
 ````xml
  <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
@@ -51,7 +51,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
 # Maven Generate JSON SCHEMA 
 - org.jsonschema plugin use 
 - http://json-schema.org/
-# Dependencies
+## Dependencies
 ````xml
   <dependency>
             <groupId>org.apache.commons</groupId>
@@ -64,7 +64,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
             <version>2.13.0</version>
         </dependency>
 ````
-# Plugin
+## Plugin
           
 ````xml
             <plugin>
@@ -86,8 +86,8 @@ This respository contains code examples for the online course [Apache Maven: Beg
                 </executions>
             </plugin>
 ````
-## Project Lombok
-# Dependency
+# Project Lombok
+## Dependency
 ````xml
     <dependency>
             <groupId>org.projectlombok</groupId>
@@ -96,8 +96,8 @@ This respository contains code examples for the online course [Apache Maven: Beg
             <scope>provided</scope>
         </dependency>
 ````
-## Mapstruct
-# Dependency
+# Mapstruct
+## Dependency
 ````xml
     <dependency>
             <groupId>org.projectlombok</groupId>
@@ -106,7 +106,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
             <scope>provided</scope>
         </dependency>
 ````
-# Plugin
+## Plugin
 ````xml
        <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
