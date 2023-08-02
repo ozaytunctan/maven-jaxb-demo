@@ -2,7 +2,7 @@
 
 This respository contains code examples for the online course [Apache Maven: Beginner to Guru.](https://www.udemy.com/draft/2043700/?couponCode=GITHUB_REPO)
 # Maven Generate XSD SCHEMA
-# USE Dependencies
+# Dependencies
 ```xml
 <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -20,7 +20,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
             <version>${jaxb.version}</version>
         </dependency>
 ````
-# Use Plugins
+#  Plugin
 ````xml
  <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
@@ -62,7 +62,7 @@ This respository contains code examples for the online course [Apache Maven: Beg
             <version>2.13.0</version>
         </dependency>
 ````
-# Plugins
+# Plugin
           
 ````xml
             <plugin>
