@@ -13,6 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
         <jaxb.version>2.3.0</jaxb.version>
+        <mapstruct.version>1.5.0.Final</mapstruct.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
@@ -34,15 +35,28 @@
             <version>${jaxb.version}</version>
         </dependency>
 
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.commons</groupId>-->
+        <!--            <artifactId>commons-lang3</artifactId>-->
+        <!--            <version>3.2.1</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+        <!--            <artifactId>jackson-databind</artifactId>-->
+        <!--            <version>2.13.0</version>-->
+        <!--        </dependency>-->
+
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.2.1</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
+
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.0</version>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
         </dependency>
     </dependencies>
 
@@ -68,6 +82,40 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!--            <plugin>-->
+            <!--                <groupId>org.jsonschema2pojo</groupId>-->
+            <!--                <artifactId>jsonschema2pojo-maven-plugin</artifactId>-->
+            <!--                <version>1.2.1</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>2</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>generate</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <sourceDirectory>${project.basedir}/src/main/resources/json</sourceDirectory>-->
+            <!--                            <targetPackage>tr.com.otunctan.model</targetPackage>-->
+            <!--                            <useCommonsLang3>true</useCommonsLang3>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
 
             <plugin>

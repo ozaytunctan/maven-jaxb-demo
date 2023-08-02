@@ -1,6 +1,8 @@
 # Apache Maven: Beginner to Ozay TUNÇTAN
 
 This respository contains code examples for the online course [Apache Maven: Beginner to Guru.](https://www.udemy.com/draft/2043700/?couponCode=GITHUB_REPO)
+### POPULAR MAVEN PLUGINS
+
 # Maven Generate XSD SCHEMA
 # Dependencies
 ```xml
@@ -82,5 +84,42 @@ This respository contains code examples for the online course [Apache Maven: Beg
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+````
+## Project Lombok
+# Dependency
+````xml
+    <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+````
+## Mapstruct
+# Dependency
+````xml
+    <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+````
+# Plugin
+````xml
+       <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
 ````
