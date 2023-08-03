@@ -12,10 +12,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
-        <jaxb.version>2.3.0</jaxb.version>
-        <mapstruct.version>1.5.0.Final</mapstruct.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <jaxb.version>2.3.0</jaxb.version>
+        <mapstruct.version>1.5.0.Final</mapstruct.version>
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
     <dependencies>
@@ -49,7 +50,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -65,7 +66,7 @@
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.14.0</version>
+                <version>0.15.3</version>
                 <executions>
                     <execution>
                         <id>xjc-1</id>
@@ -81,6 +82,182 @@
                             <generateDirectory>target/generated-sources/xjc/xjc-1</generateDirectory>
                         </configuration>
                     </execution>
+
+                    <!--                    <execution>-->
+                    <!--                        <id>2</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/vodafone</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>VodafoneCampaignService.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.vodafone</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-a</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>3</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/ttprime</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>Avantaj_1.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.ttprime</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-b</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>4</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/turkcell</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>TurkcellLoyalty_1.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.turkcell</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-c</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>5</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/giftcard</schemaDirectory>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.giftcard</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-d</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>6</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/giftcardmanager</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>NetProvIninalWS.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.giftcardmanager</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-e</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>7</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <xjbSources>-->
+                    <!--                                <xjbSource>src/main/resources/wsdl/masterpass/binding.xjb</xjbSource>-->
+                    <!--                            </xjbSources>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/masterpass</schemaDirectory>-->
+                    <!--                            <schemaIncludes>-->
+                    <!--                                <schemaInclude>MPGGenerateKeyService.wsdl</schemaInclude>-->
+                    <!--                                <schemaInclude>MPGCommitPurchaseService.wsdl</schemaInclude>-->
+                    <!--                                <schemaInclude>MPGMerchantTransactionRefundService.wsdl</schemaInclude>-->
+                    <!--                            </schemaIncludes>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-f</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>8</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/ykbqr</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>QRPaymentMerchantService.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.ykbqr</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-g</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>9</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/insurance</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>allianzInsurance.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.insurance</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-h</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>10</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <xjbSources>-->
+                    <!--                                <xjbSource>src/main/resources/wsdl/eventbooking/binding.xjb</xjbSource>-->
+                    <!--                            </xjbSources>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/eventbooking</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>EPWEventBooking.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-i</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+
+                    <!--                    <execution>-->
+                    <!--                        <id>11</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/financeEArchive</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>financeEArchive.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.financeEArchive</generatePackage>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-j</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
+                    <!--                    -->
+                    <!--                    <execution>-->
+                    <!--                        <id>12</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>generate</goal>-->
+                    <!--                        </goals>-->
+
+                    <!--                        <configuration>-->
+                    <!--                            <xjbSources>-->
+                    <!--                                <xjbSource>src/main/resources/wsdl/fusion/binding.xjb</xjbSource>-->
+                    <!--                            </xjbSources>-->
+                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--                            <schemaDirectory>src/main/resources/wsdl/fusion</schemaDirectory>-->
+                    <!--                            <schemaIncludes><schemaInclude>fusion.wsdl</schemaInclude></schemaIncludes>-->
+                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
+                    <!--                            <generatePackage>tr.com.otunctan.ws.fusion</generatePackage>-->
+                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-k</generateDirectory>-->
+                    <!--                        </configuration>-->
+                    <!--                    </execution>-->
                 </executions>
             </plugin>
 
@@ -103,6 +280,7 @@
             <!--                </executions>-->
             <!--            </plugin>-->
 
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -114,7 +292,27 @@
                             <artifactId>mapstruct-processor</artifactId>
                             <version>${mapstruct.version}</version>
                         </path>
+
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+
+                        <dependency>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>0.2.0</version>
+                        </dependency>
+
                     </annotationProcessorPaths>
+                    <!--Use Spring activate-->
+                    <!--                    <compilerArgs>-->
+                    <!--                        <compilerArg>-->
+                    <!--                            -Amapstruct.defaultComponentModel=spring-->
+                    <!--                        </compilerArg>-->
+                    <!--                    </compilerArgs>-->
+
                 </configuration>
             </plugin>
 

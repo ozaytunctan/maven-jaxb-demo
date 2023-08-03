@@ -7,5 +7,8 @@ import tr.com.otunctan.entity.User;
 @Mapper()
 public interface UserMapper {
 
-    User loggedInUserDtoToUser(LoggedInUserDto loggedInUserDto);
+    User loggedInUserToUser(LoggedInUserDto loggedInUserDto);
+
+    LoggedInUserDto userToLoggedInUser(LoggedInUserDto loggedInUserDto);
+
 }

@@ -1,7 +1,14 @@
 package tr.com.otunctan.dto;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
+
+@Data
+@NoArgsConstructor
 public class LoggedInUserDto implements Serializable {
 
     private Long id;
@@ -10,31 +17,4 @@ public class LoggedInUserDto implements Serializable {
 
     private String password;
 
-    public LoggedInUserDto() {
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
