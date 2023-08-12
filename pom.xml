@@ -83,20 +83,20 @@
                         </configuration>
                     </execution>
 
-                    <!--                    <execution>-->
-                    <!--                        <id>2</id>-->
-                    <!--                        <goals>-->
-                    <!--                            <goal>generate</goal>-->
-                    <!--                        </goals>-->
-                    <!--                        <configuration>-->
-                    <!--                            <schemaLanguage>WSDL</schemaLanguage>-->
-                    <!--                            <schemaDirectory>src/main/resources/wsdl/vodafone</schemaDirectory>-->
-                    <!--                            <schemaIncludes><schemaInclude>VodafoneCampaignService.wsdl</schemaInclude></schemaIncludes>-->
-                    <!--                            <generatePackage>tr.com.otunctan.ws.vodafone</generatePackage>-->
-                    <!--                            <cleanPackageDirectories>false</cleanPackageDirectories>-->
-                    <!--                            <generateDirectory>${project.build.directory}/generated-sources/xjc-a</generateDirectory>-->
-                    <!--                        </configuration>-->
-                    <!--                    </execution>-->
+                                        <execution>
+                                            <id>2</id>
+                                            <goals>
+                                                <goal>generate</goal>
+                                            </goals>
+                                            <configuration>
+                                                <schemaLanguage>WSDL</schemaLanguage>
+                                                <schemaDirectory>src/main/resources/wsdl/</schemaDirectory>
+                                                <schemaIncludes><schemaInclude>vakif.wsdl</schemaInclude></schemaIncludes>
+                                                <generatePackage>tr.com.otunctan.ws.vakifbank</generatePackage>
+                                                <cleanPackageDirectories>false</cleanPackageDirectories>
+                                                <generateDirectory>${project.build.directory}/generated-sources/xjc-2</generateDirectory>
+                                            </configuration>
+                                        </execution>
 
                     <!--                    <execution>-->
                     <!--                        <id>3</id>-->
